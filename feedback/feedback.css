@@ -17,6 +17,38 @@ input {
   position: relative;
   overflow:hidden;
 }
+.map {
+  height: 100vh;
+}
+
+.social-icon-wrp {
+  text-align: center;
+  width: 100%;
+   display: inline-block;
+  height: auto;
+  vertical-align: middle;
+  display: none;
+  
+}
+
+.social-icon {
+ display: inline-block;
+font-size: 29px;
+line-height: 70px;
+height: 67px;
+width: 61px;
+margin-right: 13px;
+background-color: white;
+border-radius: 100%;
+position: relative;
+opacity: 0.5;
+}
+
+.social-icon:hover {
+	background-color:#fff;
+	opacity: 1;
+}
+
 
 .wrapper .height-fix {
   display: flex;
@@ -58,14 +90,16 @@ input {
   position:relative;
   height:100%;
   width: 100%;
+  
 
 }
-.map-wrapper iframe{
+.map{
   left:0;
   top:0;
   height: 100%;
   width: 100%;
   position:relative;
+  color: black;
 }
 .title {
   display: flex;
@@ -118,10 +152,17 @@ form .input-wrapper {
   position: relative;
 }
 form .input-wrapper-2 {
-  width: 100%;
+  width: 95%;
   height: 55px;
   margin: 60px 0;
   position: relative;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 100px;
+  outline: none !important;
+  padding-bottom: 15px;
 }
 form .input-wrapper svg.icon {
   stroke: rgba(255,255,255,0.5);
@@ -158,15 +199,7 @@ form .input-wrapper ::placeholder {
   background: transparent;
   border: 0;
   text-align: left;
-  border-bottom: 1px solid white;
-  box-sizing: border-box;
-  color: white;
-  font-size: 16px;
-  margin-bottom: 30px;
-  outline: none !important;
-  padding-bottom: 15px;
-  padding-left: 50px;
-  width: 100%;
+  width: 60%;
 
 }
 
@@ -174,9 +207,8 @@ form .input-wrapper ::placeholder {
 	background-image: url("images/Shape.png");
 	background-size: cover;
 	position: absolute;
-	top: 1px;
-    left: 240px;
-	height: 46%;
+    left: 270px;
+	height: 51%;
     width: 8%;
 	text-align: right;
 	line-height: 150px;
@@ -198,7 +230,7 @@ form .input-wrapper ::placeholder {
     box-sizing: border-box;
     padding: 20px 0 45px;
   }
-   .wrapper .height-fix {
+  .wrapper .height-fix {
     min-height: 600px;
   }
   
@@ -208,24 +240,32 @@ form .input-wrapper ::placeholder {
   .subtitle {
     font-size: 15px;
   }
+ 
 }
 
  @media only screen and (min-width: 1024px) {
-	  .wrapper {
+
+ .wrapper {
     padding: 0px 0 45px;
   }
-	.map-wrapper {
+ 
+ .map-wrapper {
     width: 50%;
 	height: 100vh;
-	
   }
-  .wrapper .height-fix {
+ .wrapper .height-fix {
 	width: 50%;
-	
   } 
+  
  }
-  @media only screen and (max-width: 1000px) {
-	.map-wrapper {
+  
+@media only screen and (max-width: 1000px) {
+	
+  .title {
+    font-size: 22px;
+  }
+  
+  .map-wrapper {
     width: 100%;
 	height: 50vh;
   }
@@ -233,20 +273,28 @@ form .input-wrapper ::placeholder {
 	width: 100%;
 	min-height: 400px;
 	height: 50vh;
-	
   } 
- }
+  form {
+	margin-bottom: -50px;  
+
+  }
+}
 
 
 @media screen and (max-width: 400px) {
   
-   .wrapper .height-fix {
+ .wrapper .height-fix {
 	width: 100%;
 	height: 100vh;
   }
-  .map-wrapper {
+ .map-wrapper {
     display: none;
   }
+   .social-icon-wrp {
+ 
+  display: block;
+  
+}
   
 }
 

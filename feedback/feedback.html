@@ -8,6 +8,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="feedback.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  
+   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
 </head>
 
 <body>
@@ -21,6 +26,17 @@
        <div class="divs-wrapper"> 
     
        <div class="height-fix">
+       
+       <div class="social-icon-wrp">
+            <a class="social-icon" href="#">
+            <i class="fa fa-twitter"></i></a>
+            <a class="social-icon" href="#">
+            <i class="fa fa-facebook"></i>
+            </a>
+            <a class="social-icon" href="#">
+            <i class="fa fa-instagram"></i>
+            </a>  
+      </div>
      
       <div class="title">
         <h2>SEND FEEDBACK</h2>
@@ -54,7 +70,7 @@
     </div>
     
      <div class="map-wrapper">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.0806838353435!2d18.072670416073045!3d59.348300981665425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d401191830f%3A0xff6e8bbbca445e6b!2sLindstedtsv%C3%A4gen+24%2C+114+28+Stockholm%2C+Sweden!5e0!3m2!1sen!2s!4v1525948084066" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+       <div class="map" id="map"></div>
     </div>
     
     </div>
@@ -62,8 +78,14 @@
     
     
   </div>
+  <script type="text/javascript" src="map.js"></script>
   
-  
+ <script type="text/javascript"
+    src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false&key=AIzaSyBSsKUzYG_Wz7u2qL6unHqfBOmvaZ0H1Mg&callback=initMap">
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFxBSTTS8-q2X2D8ZkF-0QFTH64QjD5eM&callback=initMap">
+    </script> 
   
   
   
