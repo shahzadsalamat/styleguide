@@ -18,7 +18,8 @@
 
 <body>
 
- <div class='app-wrapper'>
+  
+<div class='app-wrapper'>
     
     <?php include("includes/nav-side-bar.html"); ?>
     
@@ -68,7 +69,7 @@
           </form>
     </div>
      <div class="feedback-map-wrapper">
-       <div class="feedback-map" id="map"></div>
+		<div id="map_canvas"></div>
      </div>
     </div> 
   </div>
@@ -77,21 +78,22 @@
  </div>
 </div>
   
-  <script type="text/javascript" src="js/map.js"></script>
-  <script type="text/javascript"
+  
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script  src="js/feedback-map.js"></script>
+<script type="text/javascript"
     src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false&key=AIzaSyBSsKUzYG_Wz7u2qL6unHqfBOmvaZ0H1Mg&callback=initMap"></script>
   <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFxBSTTS8-q2X2D8ZkF-0QFTH64QjD5eM&callback=initMap">
   </script> 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
     crossorigin="anonymous"></script>
   <script type='text/javascript' src='js/svgs-loader.js'></script>
   <script type='text/javascript' src='js/nav-bar.js'></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 
+
+
 </body>
+
 </html>
-
-
-
-

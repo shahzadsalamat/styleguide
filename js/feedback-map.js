@@ -1,5 +1,7 @@
-function initMap() {
-        var styledMapType = new google.maps.StyledMapType(
+var infowindow;
+
+function initialize() {
+      var styledMapType = new google.maps.StyledMapType(
            [
   {
     "elementType": "geometry",
@@ -164,8 +166,8 @@ function initMap() {
                 name: 'Styled Map'
             }
         );
-        var myLatlng = new google.maps.LatLng(55.748570, 37.598615);
-        var map = new google.maps.Map(document.getElementById('map'), {
+        var myLatlng = new google.maps.LatLng(59.270707, 18.288472);
+        var map = new google.maps.Map(document.getElementById('map_canvas'), {
             zoom: 16,
             center: myLatlng,
             scrollwheel: false,
@@ -181,23 +183,39 @@ function initMap() {
             maxWidth: 200
 			
         });
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title: 'contact us',
-				
-            icon: {
-				size: new google.maps.Size(27, 43),
-			    origin: new google.maps.Point(0, 0),
-			    anchor: new google.maps.Point(27, 43),
-                url: `data:image/svg+xml;utf-8,
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 43" enable-background="new 0 0 27 43"><style type="text/css">.st0{fill:#555A5D;} .st1{fill:#555A5D;stroke:#9CA5AC;stroke-width:3;}</style><path class="st0" d="M13.5 0c-7.5 0-13.5 6-13.5 13.4 0 13.5 13.5 29.6 13.5 29.6s13.5-16.1 13.5-29.6c0-7.4-6-13.4-13.5-13.4z"/><path class="st1" d="M13.5 5c4.7 0 8.5 3.8 8.5 8.5s-3.8 8.5-8.5 8.5-8.5-3.8-8.5-8.5 3.8-8.5 8.5-8.5z"/></svg>`
-            }
-        });
-        marker.addListener('click', function() {
-            infowindow.open(map, marker);
-        });
-        map.mapTypes.set('styled_map', styledMapType);
+ 
+	
+	
+	 var marker = new google.maps.Marker({
+     position: map.getCenter(),
+    map: map,
+	     title: 'Globuzzer Office address',
+		 color: 'black',
+
+    icon: {
+		url: 'images/pin.png',
+		scaledSize: new google.maps.Size(64, 64)
+    }
+  });
+  
+  
+  infowindow = new google.maps.InfoWindow({
+    content: " "
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent('<b>Skyttevägen 29,' + ' </br>' + '133 36 Saltsjöbaden, Sweden</b>' +
+      '<p>Time: ' + this.time + '</p>');
+    infowindow.open(map, this);
+  });
+  google.maps.event.trigger(marker, 'click');
+  
+  map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
         infowindow.open(map, marker);
-    }
+  
+}
+
+
+google.maps.event.addDomListener(window, "load", initialize);
+
