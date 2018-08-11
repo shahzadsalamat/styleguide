@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class='app-wrapper'>
+  <div class='gb-outer-wrapper'>
   
     <?php include("includes/nav-side-bar.html"); ?>
     
@@ -21,7 +21,7 @@
     <?php include("includes/nav-top-bar.html"); ?>
 
       <!-- REPLACE UNDER -->
-   <div class='background'></div>
+       <div class='gb-bg-orange'></div>
        <div class='channel-outer-wrapper'> 
           <div class="button-wrap">
                    <input type='button' value='Following'>

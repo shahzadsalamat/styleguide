@@ -13,26 +13,21 @@
    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-
 </head>
-
-<body>
-
-  
-<div class='app-wrapper'>
+<body>  
+	<div class='gb-outer-wrapper'>
+     <?php include("includes/nav-side-bar.html"); ?>
     
-    <?php include("includes/nav-side-bar.html"); ?>
-    
-    <div class='wrapper'>
-      <div class="black-overlay"></div>
-      <?php include("includes/nav-top-bar.html"); ?>
-         <!-- REPLACE UNDER -->
+      <div class='wrapper'>
+       <div class="black-overlay"></div>
+        <?php include("includes/nav-top-bar.html"); ?>
+          <!-- REPLACE UNDER -->
        
-       <div class="feedback-wrapper">
-         <div class="background">
-         </div>
-         <div class="feedback-divs-wrapper"> 
-            <div class="height-fix">
+       <div class="feedback-outer-wrapper">
+          <div class="gb-bg-image">
+          </div>
+          <div class="feedback-inner-wrapper"> 
+             <div class="gb-page-height-fix">
                <div class="feedback-social-icon-wrp">
                     <a class="feedback-social-icon" href="#">
                       <i class="fa fa-twitter"></i></a>
@@ -43,30 +38,34 @@
                    	 <i class="fa fa-instagram"></i>
                     </a>  
               </div>
-              <div class="feedback-title">
+              <div class="gb-primary-heading">
                 <h2>SEND FEEDBACK</h2>
               </div>
-               <div class="feedback-subtitle">
+               <div class="gb-secondary-heading">
                 <h5>Your feedback is very important to us.</h5>
               </div>
-           <form class="feedback-form">
-            <div class='feedback-input-wrapper'>
-              <svg class='icon' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              
+              
+           <form class="gb-form">
+            <div class='gb-input-trans-wrapper'>
+              <svg class='gb-svg-icon' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <use xlink:href='#profile'></use>
                   </svg>
-              <input type='text' placeholder="Name">
+              <input class="gb-input" type='text' placeholder="Name">
             </div>
-            <div class='feedback-input-wrapper'>
-              <svg class='icon' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class='gb-input-trans-wrapper'>
+              <svg class='gb-svg-icon' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <use xlink:href='#email'></use>
               </svg>
-              <input type='email' placeholder="Email">
+              <input class="gb-input" type='email' placeholder="Email">
             </div>
-             <div class='feedback-input-wrapper-2'>
-                <input class="feedback-message" placeholder="write something...">
-                <span class="feedback-send-button"></span>
+             <div class='gb-input-border-wrapper'>
+                <input class="gb-message-input" placeholder="write something...">
+                <span class="gb-send-button"></span>
             </div>
           </form>
+          
+          
     </div>
      <div class="feedback-map-wrapper">
 		<div id="map_canvas"></div>

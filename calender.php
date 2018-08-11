@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div class='app-wrapper'>
+  <div class='gb-outer-wrapper'>
   
     <?php include("includes/nav-side-bar.html"); ?>
     
@@ -48,9 +48,9 @@
       </div>
       
       <!-- REPLACE UNDER -->
-      <div class="calender-wrapper">
+      <div class="gb-right-navbar">
           <div class="calender-container">
-               <div class="close-calender">
+               <div class="close-right-navbar">
 				    <i class="fa fa-window-close fa-lg" aria-hidden="true"></i>                      
                </div> 
                <div id='jqxCalendar'></div>

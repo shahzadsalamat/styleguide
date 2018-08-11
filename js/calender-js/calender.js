@@ -29,13 +29,13 @@ $('#jqxButton').on('click', function () {
     }
 	
 const transWrapper = $('.articles');
-const profile = $('.calender-wrapper');
+const profile = $('.gb-right-navbar');
 $('.calender').click(()=>{
   transWrapper.addClass('translated-left');
   profile.addClass('translated-left');
 })
 
-$('.close-calender').click(()=>{
+$('.close-right-navbar').click(()=>{
   transWrapper.removeClass('translated-left');
   profile.removeClass('translated-left');
 })

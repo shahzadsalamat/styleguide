@@ -13,48 +13,46 @@
 </head>
 
 <body>
-  <div class='app-wrapper'>
-    
+  <div class='gb-outer-wrapper'>
       <?php include("includes/nav-side-bar.html"); ?>
     
-    <div class='wrapper'>
-      <div class='black-overlay'></div>
-      <?php include("includes/nav-top-bar.html"); ?>
+        <div class='wrapper'>
+          <div class='black-overlay'></div>
+            <?php include("includes/nav-top-bar.html"); ?>
       
-      <!-- REPLACE UNDER -->
-        <div class="profile-outer-wrapper">
+       <!-- REPLACE UNDER -->
+        <div class="gb-right-navbar">
 	       <div class="profile-inner-wrapper">
-            	<div class="close-profile">
+            	<div class="close-right-navbar">
 						<i class="fa fa-window-close fa-lg" aria-hidden="true"></i>           
                 </div>
-    			<div class="profile-avatar">
+                
+    			<div class="profile-avatar-large">
                         <img src="Images/profile.jpg" class="profile-avatar-image">
            	    </div>
-                <div class='profile-title'>
+                <div class='gb-primary-heading'>
                     <h2>CREATE ACCOUNT</h2>
                     <p> photographer</p>
                 </div>
-            	 <div class='profile-statics'>
-                   <div class="profile-comments">
+            	 <div class='profile-statics-row'>
+                   <div class="profile-statics-col ">
                         <h2>26</h2>
                         <p>comments</p>
                    </div>
-                   <div class="profile-channels">
+                   <div class="profile-statics-col ">
                         <h2>26</h2>
                         <p>channels</p>
                    </div>
-                   <div class="profile-bookmarks">
+                   <div class="profile-statics-col ">
                         <h2>26</h2>
                         <p>bookmarks</p>
                    </div>
                  </div>
-            		<form>
-           				 <input type='submit' value='Continue'>
+            		<form class="gb-form">
+           				 <input class="gb-submit-btn" type="submit" value='Continue'>
                    </form>
       </div>
     </div>
-      
-
              <?php include("includes/content.html"); ?>
 
       <!-- REPLACE ON TOP -->
